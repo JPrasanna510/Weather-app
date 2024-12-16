@@ -16,9 +16,12 @@
       <input type="text" id="inputCity" class="p-2 w-full border border-gray-400 rounded mb-4" placeholder="Enter city name" /><!--Input box to enter city-->
       <button id="fButton" class="w-full bg-blue-400 text-white p-2 rounded">Show Weather</button
       ><!--Button to click and respond-->
+      <button id="currentLocationBtn" class="bg-green-500 text-white mt-2 px-4 py-2 rounded w-full mb-4">Use Current Location</button>
+      <select id="recentCities" class="bg-gray-200 p-2 rounded w-full"></select>
       <div id="weatherDiv" class="mt-4 hidden flex-row gap-x-7 justify-center items-center">
         <img id="weatherIcon" class="w-10 mt-3" src="images/weather-forecast.png" alt="Weather-icon">
       </div>
+      
       <!--Div to display the fetched data-->
     </div>
 
