@@ -11,3 +11,4 @@ The Icons in the forecast division, captured from the API.
 The output divisions are always hidden until user asked to fetch data.
 Used session storage to maintain the recent searched cities, upto 5 cities.
 App shows the current weather and forecast When the user clicks on the city name in dropdown list.
+Used datalist to keep the recent searched cities inside the input field itself.

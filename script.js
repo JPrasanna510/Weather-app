@@ -3,8 +3,9 @@ const weatherDiv = document.getElementById("weatherDiv");
 const api_Key = "e561b02a734d429df42f17b3d08b41b0";
 const weatherIcon = document.getElementById("weatherIcon");
 const currentLocationBtn = document.getElementById("currentLocationBtn");
-const recentCitiesList = document.getElementById("recentCities");
+const recentCitiesList = document.getElementById("recentCitiesList");
 const forecastDiv = document.getElementById("forecastDiv");
+const clearHistoryBtn = document.createElement("button");
 //function to fetch data from
 async function fetchWeatherByCity(city) {
   try {
@@ -93,12 +94,13 @@ const dropDown = () => {
   recentCitiesList.innerHTML = ""; //initially no cities
   savedCities.forEach((city) => {
     const listItem = document.createElement("option"); //Created the list dynamically
-    listItem.textContent = city;
+    listItem.value = city;
     listItem.className = "cursor-pointer p-2 hover:bg-gray-200";
     listItem.addEventListener("click", () => fetchWeatherByCity(city));
     recentCitiesList.appendChild(listItem);
   });
 };
+
 //Event listener to the button "Show Weather" by city name.
 fButton.addEventListener("click", () => {
   const city = inputCity.value;
